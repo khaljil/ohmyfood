@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "OhmyFood_Project3_Openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khaljil/ohmyfood.git"
+  },
+  "author": "Khalid BENJILALI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khaljil/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/khaljil/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
