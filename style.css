@@ -11,12 +11,20 @@ body{
 header{
     padding:0.5rem 0rem;
     box-shadow: 0px 3px 5px gray ;
-    font-size: 18px;
+    position:relative;
 }
-h1{
+header h1{
     font-family: 'Shrikhand', cursive;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.8rem;
     font-weight: 400;
     margin:0px;
+}
+main .location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(227, 226, 226,0.7);
+    gap:1rem;
+    padding-right: 2rem;
 }
