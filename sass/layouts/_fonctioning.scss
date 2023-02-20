@@ -1,0 +1,50 @@
+.functioning {
+    padding: 1.5rem;
+    ul {
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+        gap:1rem;
+        @media (min-width:850px){
+        flex-direction:row ;
+        }
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 1.2rem;
+        position: relative;
+        padding: 0.5rem 1rem ;
+        background-color: #f6f6f6;
+        border-radius: 20px;
+        @include box-shadow;
+        &:hover {
+           @include opacity; 
+           @include box-shadow(5px);
+        }
+        &:hover i {
+            color: #9356DC;
+        }
+        i {
+            font-size: 1.2em;
+            color: gray;
+        }
+        p{
+            font-weight: 500;
+        }
+        span {
+            position: absolute;
+            font-size: 0.825rem;
+            left:-0.7rem;
+            border-radius: 50%;
+            background-color: #9356DC;
+            color: white;
+            text-align: center;
+            padding: 4px 8px;
+        }
+    }
+}
+
+    
