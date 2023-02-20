@@ -1,3 +1,4 @@
+@use "../utils/mixins";
 .functioning {
     padding: 1.5rem;
     ul {
@@ -19,10 +20,10 @@
         padding: 0.5rem 1rem ;
         background-color: #f6f6f6;
         border-radius: 20px;
-        @include box-shadow;
+        @include mixins.box-shadow;
         &:hover {
-           @include opacity; 
-           @include box-shadow(5px);
+           @include mixins.opacity; 
+           @include mixins.box-shadow(5px);
         }
         &:hover i {
             color: #9356DC;
