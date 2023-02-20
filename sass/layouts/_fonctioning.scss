@@ -17,7 +17,7 @@
         flex-grow: 1;
         gap: 1.2rem;
         position: relative;
-        padding: 0.5rem 1rem ;
+        padding: 0.5rem 1rem;
         background-color: #f6f6f6;
         border-radius: 20px;
         @include mixins.box-shadow;
@@ -29,7 +29,7 @@
             color: #9356DC;
         }
         i {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             color: gray;
         }
         p{
