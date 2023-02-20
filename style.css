@@ -31,18 +31,18 @@ header h1 {
   padding-right: 2rem;
 }
 
-.heading-primary {
+.explore-resto {
   text-align: center;
   padding: 1rem 0 3.5rem 0;
   background-color: rgb(248, 246, 246);
 }
-.heading-primary h2 {
+.explore-resto h2 {
   font-size: 1.6rem;
 }
-.heading-primary p {
+.explore-resto p {
   font-size: 1.1rem;
 }
-.heading-primary button {
+.explore-resto button {
   margin-top: 1rem;
   color: white;
   padding: 1rem 1.5rem;
@@ -52,7 +52,7 @@ header h1 {
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
 }
-.heading-primary button:hover {
+.explore-resto button:hover {
   opacity: 0.7;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.7);
 }
