@@ -1,54 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-body{
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
-}
-*{
-    box-sizing: border-box;
-}    
-header{
-    padding:0.5rem 0rem;
-    box-shadow: 0px 3px 5px gray ;
-    position:relative;
-}
-header h1{
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 400;
-    margin:0px
-}
-main .location{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:rgba(227, 226, 226,0.7);
-    gap:1rem;
-    padding-right: 2rem;
-}
-main .heading-primary {
-   text-align: center;
-   padding:1rem 0 3.5rem 0 ;
-   background-color: rgb(248, 246, 246); 
-}
-main .heading-primary h2 {
-    font-size: 1.6rem;
-}
-main .heading-primary p {
-    font-size: 1.1rem;
-}
-main .heading-primary button {
-    margin-top:1rem;
-    color: white;
-    padding: 1rem 1.5rem;
-    font-size: 0.95rem;
-    border-radius: 1.5rem;
-    border: none;
-    background: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
-}
-.heading-primary button:hover {
-    opacity: 0.7;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.7);
-}
+@import "./sass/base/base";
+@import "./sass/layouts/header";
+@import "./sass/layouts/location";
+@import "./sass/layouts/heading_primary.scss";
+
+
