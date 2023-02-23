@@ -3,7 +3,7 @@
 .explore-resto {
     text-align: center;
     padding:1rem 0 3.5rem 0 ;
-    background:variables.$light-gray; 
+    background-color:lighten(gray,47%); 
     & h2 {
         font-size: 1.6rem;
     }

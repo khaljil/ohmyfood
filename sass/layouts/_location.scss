@@ -1,8 +1,9 @@
+@use "../utils/variables";
 .location{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgba(227, 226, 226,0.7);
+    background-color:lighten(gray,43%);
     gap:1rem;
     padding-right: 2rem;
 }

@@ -4,3 +4,11 @@
 @mixin opacity($op:0.7){
     opacity: $op;
 }
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row-center{
+    display: flex;
+    justify-content: center;
+}
