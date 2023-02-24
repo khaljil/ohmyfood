@@ -1,0 +1,19 @@
+footer{
+    background-color: darken(gray,30%);
+    color:white;
+    padding: 1.5rem;
+    .heading{
+        margin-bottom:1rem;
+        font-size: 1.2rem;
+    }
+    p{
+        margin-bottom:0.3rem;
+        i{
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+            &.fa-smaller{
+            font-size: 0.65em ;
+            }
+        }
+    }   
+}    
