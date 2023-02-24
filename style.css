@@ -139,7 +139,7 @@ header h1 {
     flex-wrap: wrap;
   }
 }
-.restaurants .cards .card {
+.restaurants .card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -148,44 +148,55 @@ header h1 {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
 }
 @media (min-width: 800px) {
-  .restaurants .cards .card {
+  .restaurants .card {
     flex-grow: 1;
     flex-basis: 45%;
   }
 }
-.restaurants .cards .card__img {
+.restaurants .card__img {
   height: 11rem;
   background-size: cover;
   background-position: 50% 60%;
   border-radius: 1rem 1rem 0 0;
 }
-.restaurants .cards .card__img.card__img1 {
+.restaurants .card__img.card__img1 {
   background-image: url("../../assets/restaurant1.jpg");
 }
-.restaurants .cards .card__img.card__img2 {
+.restaurants .card__img.card__img2 {
   background-image: url("../../assets/restaurant2.jpg");
 }
-.restaurants .cards .card__img.card__img3 {
+.restaurants .card__img.card__img3 {
   background-image: url("../../assets/restaurant3.jpg");
 }
-.restaurants .cards .card__img.card__img4 {
+.restaurants .card__img.card__img4 {
   background-image: url("../../assets/restaurant4.jpg");
 }
-.restaurants .cards .card__desc {
+.restaurants .card__desc {
   position: relative;
   margin: 1rem 0.7rem auto;
   color: gray;
 }
-.restaurants .cards .card__desc p {
+.restaurants .card__desc p {
   margin-top: 0.3rem;
 }
-.restaurants .cards .card__desc i.fa-regular {
+.restaurants .card__desc i {
   font-size: 1.5rem;
   position: absolute;
   right: 0.6rem;
   top: 0;
 }
-.restaurants .cards .card--new::before {
+.restaurants .card__desc .fa-solid {
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  transform: scale(0);
+  transition: transform 500ms ease-in-out;
+  transform-origin: bottom;
+}
+.restaurants .card__desc:hover .fa-solid {
+  transform: scale(1);
+}
+.restaurants .card--new::before {
   content: "Nouveau";
   position: absolute;
   padding: 0.4rem 0.8rem;

@@ -1,6 +1,5 @@
 @use "../utils/variables";
 @use "../utils/mixins";
-
 .restaurants{
     padding: 2rem 1.5rem;
     background-color:lighten(gray,47%);
@@ -11,54 +10,65 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
-        .card{
-            position:relative;
-            @include mixins.flex-column;
-            background-color: white;
-            border-radius: 1rem;
-            @include mixins.box-shadow;
-            @media (min-width:variables.$breakpoint){
-                flex-grow: 1;;
-                flex-basis: 45%;
-            }
-            &__img{
-                height:11rem;
-                background-size:cover;
-                background-position:50% 60%;
-                border-radius: 1rem 1rem 0 0 ;
-                @for $i from 1 through 4{
-                    &.card__img#{$i}{
-                        background-image:url("../../assets/restaurant#{$i}.jpg") ;   
-                    }
+    }    
+    .card{
+        position:relative;
+        @include mixins.flex-column;
+        background-color: white;
+        border-radius: 1rem;
+        @include mixins.box-shadow;
+        @media (min-width:variables.$breakpoint){
+            flex-grow: 1;;
+            flex-basis: 45%;
+        }
+        &__img{
+            height:11rem;
+            background-size:cover;
+            background-position:50% 60%;
+            border-radius: 1rem 1rem 0 0 ;
+            @for $i from 1 through 4{
+                &.card__img#{$i}{
+                    background-image:url("../../assets/restaurant#{$i}.jpg") ;   
                 }
             }
-            &__desc{
-                position: relative;
-                margin: 1rem 0.7rem auto;
-                color:gray;
-                p{
-                    margin-top: 0.3rem;
-                }    
-                i.fa-regular{
-                    font-size: 1.5rem;
-                    position: absolute;
-                    right: 0.6rem;
-                    top:0;
-                }    
+        }
+        &__desc{
+            position: relative;
+            margin: 1rem 0.7rem auto;
+            color:gray;
+            p{
+                margin-top: 0.3rem;
+            }    
+            i{
+                font-size: 1.5rem;
+                position: absolute;
+                right: 0.6rem;
+                top:0;
+            }    
+            .fa-solid{
+                color: transparent;
+                @include mixins.bg-linear-gradient;
+                background-clip: text;
+                transform: scale(0);
+                transition: transform 500ms ease-in-out;
+                transform-origin: bottom;
             }
-            &--new::before{
-                content: "Nouveau";
-                position:absolute;
-                padding: 0.4rem 0.8rem;
-                text-align: center;
-                background-color: variables.$color-tertiary;
-                top:0.8rem;
-                right:0.8rem;
-                border-radius:0.3rem;
-                color:darken(variables.$color-tertiary,45%);
-                font-size: 0.9rem;
-                font-weight: 500;
+            &:hover .fa-solid{
+                transform: scale(1);
             }
         }
+        &--new::before{
+            content: "Nouveau";
+            position:absolute;
+            padding: 0.4rem 0.8rem;
+            text-align: center;
+            background-color: variables.$color-tertiary;
+            top:0.8rem;
+            right:0.8rem;
+            border-radius:0.3rem;
+            color:darken(variables.$color-tertiary,45%);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
     }
-} 
+}

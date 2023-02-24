@@ -1,8 +1,6 @@
+@use "../utils/variables";
 @mixin box-shadow($spread:0px){
     box-shadow: 0px 0px 5px $spread rgba(0,0,0,0.7);
-}
-@mixin opacity($op:0.7){
-    opacity: $op;
 }
 @mixin flex-column{
     display: flex;
@@ -11,4 +9,7 @@
 @mixin flex-row-center{
     display: flex;
     justify-content: center;
+}
+@mixin bg-linear-gradient{
+    background: linear-gradient(variables.$color-secondary , variables.$color-primary);
 }

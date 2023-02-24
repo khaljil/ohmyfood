@@ -21,7 +21,7 @@
         border-radius: 20px;
         @include mixins.box-shadow;
         &:hover {
-           @include mixins.opacity; 
+           opacity: 0.7;
            @include mixins.box-shadow(5px);
         }
         &:hover i {

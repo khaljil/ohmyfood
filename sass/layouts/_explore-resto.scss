@@ -17,10 +17,10 @@
         font-size: 0.95rem;
         border-radius: 1.5rem;
         border: none;
-        background: linear-gradient(variables.$color-secondary , variables.$color-primary);
+        @include mixins.bg-linear-gradient;
         @include mixins.box-shadow;
         &:hover {
-            @include mixins.opacity;
+            opacity: 0.7;
             @include mixins.box-shadow(5px);
         }
     }
