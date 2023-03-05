@@ -1,0 +1,132 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+@keyframes btn-cheked{
+    from{
+        transform:rotate(-270deg);
+    }
+    to{
+        transform:rotate(0);
+    }
+}
+
+header{
+    a{
+        position:absolute;
+        top:50%;
+        left: 1rem;
+        font-size: 1.3rem;  
+        transform: translateY(-50%);
+    }
+} 
+.resto-banner{
+    background-image:url(../../assets/restaurant1.jpg) ;
+    height:25vh;
+    background-size:cover;
+    background-position:50% 60%;
+}
+.resto-name{   
+    padding: 2rem 1rem 1rem 1rem;
+    position: relative;
+    h2{
+        font-size: 1.7rem;
+        position: relative;
+        @include mixins.heart-anim($right:1rem,$size:1.5rem);
+    }
+    &:hover h2::after{
+        transform: scale(1);
+    }
+    margin-top: -3rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color:lighten(gray,47%);
+}
+.menu{
+    background-color:lighten(gray,47%);
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1rem;
+    @media (min-width:variables.$breakpoint){
+        grid-template-columns:repeat(2,1fr);
+    }    
+    h3{
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1rem;
+        &::after{
+            content: "";
+            display: block;
+            border-bottom: 3px solid variables.$color-tertiary;
+            width: 2.5rem;
+        }
+    }
+    &__category{
+        overflow: hidden;
+        padding: 0.5rem 1rem;
+    }
+    &__content{
+        position:relative;
+        background: white;
+        border-radius: 1rem ;
+        margin-top: 1rem;
+        display:flex;
+        overflow: hidden;
+        @include mixins.box-shadow;
+        h4{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+        p{
+            margin:0.2rem 0 auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.96rem;
+            font-weight: 300;
+
+        }
+        &:hover{
+            cursor: pointer;
+            .menu__cheked{
+                margin-right: 0rem;
+                &::after{
+                    animation: btn-cheked 1s ease-in-out ;
+                }    
+            }
+        } 
+    }    
+    &__desc{
+            padding:0.5rem 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    &__price{
+            display:flex;
+            align-items: flex-end;
+            margin-left: auto;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+        }    
+    &__cheked{
+        background-color: variables.$color-tertiary;
+        display: grid;
+        place-items: center;
+        width: 4rem;
+        margin-right: -4rem;
+        transition: margin-right 1s ease-in-out;
+        &::after{
+            font-family: "FontAwesome";
+            content: "\f058";
+            color:white;
+            font-size: 1.5rem;
+        }
+    }    
+}  
+    
+
+
+
+
+
+
+

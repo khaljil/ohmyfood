@@ -13,3 +13,35 @@
 @mixin bg-linear-gradient{
     background: linear-gradient(variables.$color-secondary , variables.$color-primary);
 }
+@mixin heart($top,$right,$size){
+    font: var(--fa-font-regular);
+    content:"\f004" ;
+    position: absolute;
+    font-size: $size;
+    right: $right;
+    top: $top;
+}
+@mixin heart-solid($top,$right,$size){
+    font: var(--fa-font-solid);
+    content:"\f004" ;
+    position: absolute;
+    font-size: $size;
+    right: $right;
+    top: $top;
+}
+@mixin heart-anim($top:0.3rem,$right:1.5rem,$size:1rem){
+    &::before{
+        @include heart($top,$right,$size);
+        color: gray;
+    }
+    &::after{
+        @include heart-solid($top,$right,$size);    
+        color: transparent;
+        @include bg-linear-gradient;
+        background-clip: text;
+        transform: scale(0);
+        transition: transform 500ms ease-in-out;
+        transform-origin: bottom;
+    }
+   
+}    

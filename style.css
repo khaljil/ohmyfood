@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header .heading, footer .heading {
+.heading {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   margin: 0;
@@ -20,7 +20,7 @@ footer p {
   margin: 0;
 }
 
-h3 {
+h3, h4 {
   margin: 0;
   color: initial;
 }
@@ -125,6 +125,7 @@ header h1 {
   text-align: center;
   padding: 4px 8px;
 }
+
 .restaurants {
   padding: 2rem 1.5rem;
   background-color: #f8f8f8;
@@ -174,19 +175,25 @@ header h1 {
 }
 .restaurants .card__desc {
   position: relative;
-  margin: 1rem 0.7rem auto;
+  padding: 1rem 0.7rem 0rem 0.7rem;
   color: gray;
 }
-.restaurants .card__desc p {
-  margin-top: 0.3rem;
-}
-.restaurants .card__desc i {
-  font-size: 1.5rem;
+.restaurants .card__desc::before {
+  font: var(--fa-font-regular);
+  content: "\f004";
   position: absolute;
-  right: 0.6rem;
-  top: 0;
+  font-size: 1.5rem;
+  right: 1.5rem;
+  top: 1rem;
+  color: gray;
 }
-.restaurants .card__desc .fa-solid {
+.restaurants .card__desc::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  position: absolute;
+  font-size: 1.5rem;
+  right: 1.5rem;
+  top: 1rem;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
@@ -194,7 +201,10 @@ header h1 {
   transition: transform 500ms ease-in-out;
   transform-origin: bottom;
 }
-.restaurants .card__desc:hover .fa-solid {
+.restaurants .card__desc p {
+  margin-top: 0.3rem;
+}
+.restaurants .card__desc:hover::after {
   transform: scale(1);
 }
 .restaurants .card--new::before {
@@ -229,6 +239,151 @@ footer p i {
 }
 footer p i.fa-smaller {
   font-size: 0.65em;
+}
+
+@keyframes btn-cheked {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+header a {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  font-size: 1.3rem;
+  transform: translateY(-50%);
+}
+
+.resto-banner {
+  background-image: url(../../assets/restaurant1.jpg);
+  height: 25vh;
+  background-size: cover;
+  background-position: 50% 60%;
+}
+
+.resto-name {
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+  margin-top: -3rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f8f8f8;
+}
+.resto-name h2 {
+  font-size: 1.7rem;
+  position: relative;
+}
+.resto-name h2::before {
+  font: var(--fa-font-regular);
+  content: "\f004";
+  position: absolute;
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 0.3rem;
+  color: gray;
+}
+.resto-name h2::after {
+  font: var(--fa-font-solid);
+  content: "\f004";
+  position: absolute;
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 0.3rem;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  transform: scale(0);
+  transition: transform 500ms ease-in-out;
+  transform-origin: bottom;
+}
+.resto-name:hover h2::after {
+  transform: scale(1);
+}
+
+.menu {
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 800px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.menu h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.menu h3::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #99E2D0;
+  width: 2.5rem;
+}
+.menu__category {
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+}
+.menu__content {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+.menu__content h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.menu__content p {
+  margin: 0.2rem 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.96rem;
+  font-weight: 300;
+}
+.menu__content:hover {
+  cursor: pointer;
+}
+.menu__content:hover .menu__cheked {
+  margin-right: 0rem;
+}
+.menu__content:hover .menu__cheked::after {
+  animation: btn-cheked 1s ease-in-out;
+}
+.menu__desc {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+.menu__cheked {
+  background-color: #99E2D0;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  margin-right: -4rem;
+  transition: margin-right 1s ease-in-out;
+}
+.menu__cheked::after {
+  font-family: "FontAwesome";
+  content: "\f058";
+  color: white;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

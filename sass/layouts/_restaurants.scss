@@ -34,27 +34,16 @@
         }
         &__desc{
             position: relative;
-            margin: 1rem 0.7rem auto;
+            padding: 1rem 0.7rem 0rem 0.7rem;
             color:gray;
+            @include mixins.heart-anim($top:1rem,$size:1.5rem);
             p{
                 margin-top: 0.3rem;
             }    
-            i{
-                font-size: 1.5rem;
-                position: absolute;
-                right: 0.6rem;
-                top:0;
-            }    
-            .fa-solid{
-                color: transparent;
-                @include mixins.bg-linear-gradient;
-                background-clip: text;
-                transform: scale(0);
-                transition: transform 500ms ease-in-out;
-                transform-origin: bottom;
-            }
-            &:hover .fa-solid{
-                transform: scale(1);
+            &:hover {
+                &::after{
+                    transform: scale(1);
+                }
             }
         }
         &--new::before{
