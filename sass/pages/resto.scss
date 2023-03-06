@@ -47,16 +47,27 @@ header{
     gap:1rem;
     @media (min-width:variables.$breakpoint){
         grid-template-columns:repeat(2,1fr);
-    }    
+    } 
+    @media (min-width:variables.$breakpoint2){
+        grid-template-columns:repeat(3,1fr);
+    }       
+    div:nth-child(2){
+        h3{
+            margin-left: 2rem;
+        }
+    }
     h3{
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1rem;
+        position: relative;
         &::after{
             content: "";
             display: block;
             border-bottom: 3px solid variables.$color-tertiary;
             width: 2.5rem;
+            position: absolute;
+            bottom:-0.5rem;
         }
     }
     &__category{
@@ -67,14 +78,14 @@ header{
         position:relative;
         background: white;
         border-radius: 1rem ;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display:flex;
         overflow: hidden;
         @include mixins.box-shadow;
         h4{
             overflow: hidden;
             text-overflow: ellipsis;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 500;
         }
         p{
@@ -104,8 +115,9 @@ header{
             display:flex;
             align-items: flex-end;
             margin-left: auto;
-            font-weight: 700;
-            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-size: 0.96rem;
+            padding: 0.5rem 1rem 0.5rem 0;
         }    
     &__cheked{
         background-color: variables.$color-tertiary;
