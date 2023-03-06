@@ -133,7 +133,19 @@ header{
             font-size: 1.5rem;
         }
     }    
-}  
+}   
+.btn-order{
+    text-align: center;
+    button{
+        @include mixins.btn-display;
+        width: 18vh;
+        cursor: pointer;
+        margin-bottom: 2rem;
+    }
+}
+
+
+  
     
 
 

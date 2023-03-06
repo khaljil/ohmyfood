@@ -11,17 +11,6 @@
         font-size: 1.1rem;
     }
     & button {
-        margin-top:1rem;
-        color: white;
-        padding: 1rem 1.5rem;
-        font-size: 0.95rem;
-        border-radius: 1.5rem;
-        border: none;
-        @include mixins.bg-linear-gradient;
-        @include mixins.box-shadow;
-        &:hover {
-            opacity: 0.7;
-            @include mixins.box-shadow(5px);
-        }
+       @include mixins.btn-display;
     }
 }

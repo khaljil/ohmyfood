@@ -43,5 +43,19 @@
         transition: transform 500ms ease-in-out;
         transform-origin: bottom;
     }
-   
 }    
+@mixin btn-display{
+    margin-top:1rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    @include bg-linear-gradient;
+    @include box-shadow;
+    &:hover {
+        opacity: 0.7;
+        @include box-shadow(5px);
+    }
+}
+
