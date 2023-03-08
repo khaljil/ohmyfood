@@ -9,7 +9,16 @@
         transform:rotate(0);
     }
 }
-
+@keyframes menu-items-anim{
+    from{
+        transform:translateY(-50%);
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
 header{
     a{
         position:absolute;
@@ -82,6 +91,15 @@ header{
         display:flex;
         overflow: hidden;
         @include mixins.box-shadow;
+        $anim-duration: 1s;
+        animation: menu-items-anim $anim-duration ease-in-out backwards;
+        transform-origin: top;
+        @for $i from 1 through 3{
+            &:nth-child(#{$i+1}){
+                animation-delay: 100ms*$i;
+                //background-color: red; 
+            }
+        }
         h4{
             overflow: hidden;
             text-overflow: ellipsis;
@@ -94,7 +112,6 @@ header{
             text-overflow: ellipsis;
             font-size: 0.96rem;
             font-weight: 300;
-
         }
         &:hover{
             cursor: pointer;
