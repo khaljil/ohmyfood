@@ -267,11 +267,15 @@ header a {
   transform: translateY(-50%);
 }
 
-.resto-banner {
-  background-image: url(../../assets/restaurant1.jpg);
+main {
+  background-color: #f8f8f8;
+}
+
+.resto-banner img {
   height: 25vh;
-  background-size: cover;
-  background-position: 50% 60%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
 }
 
 .resto-name {
@@ -313,7 +317,6 @@ header a {
 }
 
 .menu {
-  background-color: #f8f8f8;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
@@ -433,7 +436,7 @@ header a {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
   width: 18vh;
   cursor: pointer;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .btn-order button:hover {
   opacity: 0.7;
